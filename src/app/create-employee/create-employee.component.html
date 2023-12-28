@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+        <label for="firstName" class="form-label">FirstName:</label>
+        <input type="text" name="firstName" [(ngModel)]="employees.firstName" class="form-control" id="exampleInputPassword1">
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName" class="form-label">lastName:</label>
+        <input type="text" name="lastName" [(ngModel)]="employees.lastName" class="form-control" id="exampleInputPassword1">
+      </div>
+
+
+    <div class="mb-3">
+      <label for="emailId" class="form-label">Email address</label>
+      <input type="email" name="emailId" [(ngModel)]="employees.emailId" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+
+ 
+
+
+ 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

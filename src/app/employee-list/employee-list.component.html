@@ -1,0 +1,35 @@
+
+<div class="container">
+    
+<table class="table  table-dark table-striped table-hover">
+    <thead>
+        <tr>
+          <th scope="col">ID:</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email Id</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let employee of employeedata">
+        <tr>
+          <th scope="row">{{employee.id}}</th>
+          <td>{{employee.firstName}}</td>
+          <td>{{employee.lastName}}</td>
+          <td>{{employee.emailId}}</td>
+          <td>
+           
+          <button class="btn btn-info" [routerLink]="['/update', employee.id]">Update  <mat-icon matSuffix>edit</mat-icon></button>
+          &nbsp;
+          <button class="btn btn-danger" (click)="delete(employee.id)">Delete  <mat-icon matSuffix>delete</mat-icon></button>
+          &nbsp;
+          <button class="btn btn-success" [routerLink]="['/details', employee.id]">Details  <mat-icon matSuffix>manage_accounts</mat-icon></button>
+
+
+
+          </td>
+        </tr>
+        </tbody>
+  </table>
+  
+</div>
